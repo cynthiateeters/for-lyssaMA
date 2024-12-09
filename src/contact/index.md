@@ -6,8 +6,8 @@ permalink: /contact/
 
 <section class="contact">
   <div class="container flow">
-    <div class="contact-logo-container">
-      <img src="/images/TP GOLD TRIM (4K x 4K).png" alt="True Poet Digital Designs Logo" class="contact-logo">
+<img src="/images/TP-GOLD-TRIM-400x400.png" alt="True Poet Digital Designs logo" width="400" height="400" class="contact-logo">
+      </div>
     </div>
 
     <!-- Header title -->
