@@ -255,9 +255,23 @@ header,
   margin-block: -1px;
 }
 
+.two-column {
+  --spacing: calc(var(--gap) * 0.25);
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: var(--spacing);
+  padding-inline: var(--spacing);
+}
 
+.two-column h2 {
+  padding-block: 0;
+}
 
-// .inner-container {
-//   outline: 1px solid rebeccapurple;
-//   outline-offset: -1px;
-// }
+.form-container {
+  max-width: var(--contentWidth);
+  margin-inline: auto;
+  background-color: var(--medium-brown);
+  padding-block: var(--gap, 1em);
+  margin-block: var(--gap, 1em);
+}

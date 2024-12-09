@@ -6,28 +6,29 @@ permalink: /contact/
 
 <section class="contact">
   <div class="container flow">
-<img src="/images/TP-GOLD-TRIM-400x400.png" alt="True Poet Digital Designs logo" width="400" height="400" class="contact-logo">
-      </div>
+    <div class="inner-container two-column">
+      <img src="/images/TP-GOLD-TRIM-400x400.png" alt="True Poet Digital Designs logo" width="400" height="400"
+        class="contact-logo">
+      <h2 class="section-title">Contact Us</h2>
     </div>
+  </div>
 
-    <!-- Header title -->
-    <h2 class="section-title">Contact Us</h2>
-
+  <div class="form-container">
     <form name="contact" method="POST" data-netlify="true" id="contact-form">
       <input type="hidden" name="form-name" value="contact">
 
-      <p>
+      <div class="form-field">
         <label for="name">Name:</label>
         <input type="text" id="name" name="name" required>
-      </p>
-      <p>
+      </div>
+      <div class="form-field">
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required>
-      </p>
-      <p>
+      </div>
+      <div class="form-field">
         <label for="message">Message:</label>
         <textarea id="message" name="message" required></textarea>
-      </p>
+      </div>
 
       <!-- Send Button -->
       <div class="form-btn-container">
