@@ -1,0 +1,23 @@
+.site-footer {
+  --logo-color: currentColor;
+  padding: 1em 0;
+  color: var(--accent-color-3); // Light Orange
+  background-color: var(--dark-brown); // Dark Brown
+  text-align: center;
+}
+
+/* Footer Link Styles */
+.footer-link {
+  color: var(--accent-color-2); // Gold
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+/* Footer Logo */
+.site-footer img.logo {
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}

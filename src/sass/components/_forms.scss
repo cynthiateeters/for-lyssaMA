@@ -2,8 +2,8 @@
 form {
   max-width: 700px;
   margin: 0 auto;
-  padding: 20px;
-  background-color: #f9f9f9;
+  padding: 1.5rem;
+  background-color: var(--background-light);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -13,7 +13,7 @@ label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #333;
+  color: var(--neutral-dark);
 }
 
 /* Input Fields */
@@ -23,10 +23,10 @@ textarea {
   width: 100%;
   padding: 20px;
   margin-bottom: 15px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-neutral);
   border-radius: 4px;
   font-size: 16px;
-  color: #333;
+  color: var(--neutral-dark);
 }
 
 /* Textarea Styling */
@@ -38,7 +38,7 @@ textarea {
 /* Send Button */
 button {
   padding: 12px 20px;
-  background-color: #b26834;
+  background-color: var(--medium-brown);
   /* Saddle Brown  */
   color: white;
   font-size: 16px;
@@ -50,7 +50,7 @@ button {
 
 /* Button Hover Effect */
 button:hover {
-  background-color: #3b2e2e;
+  background-color: var(--dark-brown);
   /* Dark Brown  */
 }
 
@@ -79,7 +79,7 @@ button:hover {
 /* Contact Button Styling */
 .contact-button {
   padding: 12px 20px;
-  background-color: #b26834;
+  background-color: var(--medium-brown);
   /* Saddle Brown */
   color: white;
   font-size: 18px;
@@ -92,7 +92,7 @@ button:hover {
 
 /* Contact Button Hover Effect */
 .contact-button:hover {
-  background-color: #3b2e2e;
+  background-color: var(--dark-brown);
   /* Dark Brown */
 }
 
@@ -123,4 +123,11 @@ button:hover {
 .contact-logo {
   width: 120px;
   height: auto;
+}
+
+.form-container {
+  max-width: var(--contentWidth);
+  margin-inline: auto;
+  padding: 0;
+  margin-block: var(--gap, 1em);
 }

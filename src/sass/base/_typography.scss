@@ -1,1 +1,22 @@
 /* typography */
+
+// Font Face Declarations
+@font-face {
+  font-family: 'Epilogue';
+  src: url('/fonts/Epilogue-VariableFont_wght.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rammetto One';
+  src: url('/fonts/RammettoOne-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// CSS Custom Properties
+:root {
+  --ff-body: 'Epilogue', sans-serif;
+  --ff-heading: 'Rammetto One', cursive;
+}
