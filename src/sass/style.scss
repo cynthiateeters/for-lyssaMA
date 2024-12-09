@@ -1,0 +1,263 @@
+@use "./base/reset";
+@use "./abstracts/colors";
+@use "./abstracts/variables";
+@use "./base/typography";
+@use "./base/buttons";
+@use './forms';
+
+// Font Face Declarations
+@font-face {
+  font-family: 'Epilogue';
+  src: url('/fonts/Epilogue-VariableFont_wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Rammetto One';
+  src: url('/fonts/RammettoOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// CSS Custom Properties
+:root {
+  --ff-body: 'Epilogue', sans-serif;
+  --ff-heading: 'Rammetto One', cursive;
+}
+
+
+/* //////////////////////
+  General styling
+  /////////////////////// */
+
+body {
+  font-family: var(--ff-body);
+  font-size: var(--fs-400);
+  color: var(--clr-neutral-900);
+  background-color: var(--neutral-light);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-900);
+  line-height: 1.1;
+}
+
+p,
+li,
+h1,
+h2,
+h3 {
+  max-width: var(--contentWidth);
+  padding-inline: clamp(0.5rem, -0.0455rem + 2.7273vw, 2rem);
+  ;
+}
+
+p,
+li,
+h3 {
+  font-size: clamp(1.25rem, 0.9773rem + 1.3636vw, 2rem);
+}
+
+ul.skills__list li {
+  margin-block: var(--gap);
+  font-size: clamp(1rem, 0.6364rem + 1.8182vw, 2rem);
+}
+
+header {
+  background-color: var(--primary-color);
+}
+
+.container {
+  padding-block: calc(var(--gap, 1em)/2);
+  background-color: var(--accent-color-3);
+  outline: 1rem solid var(--accent-color-2);
+  outline-offset: -2px;
+}
+
+.header-title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+strong {
+  font-weight: var(--fw-700);
+}
+
+// section,
+// .section {
+//   padding: min(2vh, 2em) 0;
+// }
+
+/* //////////////////////
+    Utility Classes
+    /////////////////////// */
+
+/* select all direct children of .flow
+     and add margin to the top for proper
+     spacing */
+
+.flow > *:where(:not(:first-child)) {
+  margin-top: var(--flow-spacer, 1em);
+}
+
+.container {
+  margin-inline: auto;
+}
+
+.container--narrow {
+  max-width: 65rem;
+}
+
+.flex-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap, 1em);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* typgraphy */
+
+.article-title,
+.section-title {
+  color: var(--clr-primary-500);
+  padding-bottom: var(--gap, 1em);
+}
+
+.article-title {
+  font-size: var(--fs-700);
+}
+
+.section-title {
+  font-size: var(--fs-600);
+}
+
+/* //////////////////////
+  Main & section
+  /////////////////////// */
+
+main {
+  display: grid;
+  gap: var(--gap, 1em);
+}
+
+section {
+  margin-block: -0.25rem;
+}
+
+/* //////////////////////
+  Header
+  /////////////////////// */
+
+.page-header {
+  padding: 2em 0;
+  padding: var(--gap, 1em);
+  margin-inline: calc(var(--gap, 1em) * -1);
+}
+
+.page-header__content {
+  display: grid;
+  justify-content: center;
+  gap: var(--gap, 1em);
+}
+
+.nav-list {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list a {
+  color: var(--clr-neutral-900);
+  text-decoration: none;
+}
+
+.nav-list a:focus,
+.nav-list a:hover {
+  color: var(--clr-primary-400);
+  text-decoration: underline;
+}
+
+/* //////////////////////
+  Footer
+  (make it sticky)
+  https://css-tricks.com/couple-takes-sticky-footer/
+  /////////////////////// */
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: grid;
+  gap: var(--gap, 1em);
+  padding: var(--blockPadding) max(1rem, 50vw - var(--contentWidth) / 2);
+}
+
+header,
+.site-footer {
+  flex-shrink: 0;
+}
+
+.site-footer {
+  --logo-color: currentColor;
+  padding-block: 2em;
+  text-align: center;
+}
+
+/* //////////////////////
+  Homepage
+  /////////////////////// */
+
+.hero__content {
+  display: grid;
+  justify-items: center;
+  gap: var(--gap, 1em);
+}
+
+.hero__image {
+  width: 100%;
+  max-width: 300px;
+  margin-inline: auto;
+  /* max-height: max(15rem, 40vh); */
+  object-fit: cover;
+}
+
+// @media (min-width: 45em) {
+//   .hero > div {
+//     grid-auto-flow: column;
+//   }
+// }
+
+.featured-articles {
+  background-color: var(--clr-primary-100);
+}
+
+.articles__list {
+  --flow-spacer: 3rem;
+  margin: 6rem 0;
+}
+
+.inner-container {
+  display: grid;
+  gap: var(--gap, 1em);
+  max-width: var(--contentWidth);
+  margin-inline: auto;
+  background-color: var(--medium-brown);
+  padding-block: var(--gap, 1em);
+  margin-block: -1px;
+}
+
+
+
+// .inner-container {
+//   outline: 1px solid rebeccapurple;
+//   outline-offset: -1px;
+// }

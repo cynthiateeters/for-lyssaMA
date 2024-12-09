@@ -1,0 +1,97 @@
+@use "../abstracts/colors" as *;
+
+/* ///////////////////////
+Buttons
+/////////////////////// */
+.align-right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* Existing Button Styles */
+.btn {
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1;
+  padding: 0.75em 1.75em;
+  border-radius: 0.25em;
+  align-self: start;
+  justify-self: start;
+  margin-bottom: 4em;
+  align-self: flex-end;
+}
+
+.btn:focus {
+  outline: 0.125em solid var(--accent-color-2);
+  /* Gold */
+  outline-offset: 0.25em;
+}
+
+/* Primary Button Style */
+.btn--primary {
+  background: var(--accent-color-2);
+  /* Gold */
+  color: var(--dark-brown);
+  /* Dark Brown */
+  font-weight: var(--fw-700);
+  border: 4px solid var(--accent-color-2);
+  /* Gold */
+  margin-bottom: 4em;
+  max-width: 80%;
+}
+
+.btn--primary:hover,
+.btn--primary:focus {
+  background: var(--dark-brown);
+  /* Dark Brown */
+  border-color: var(--dark-brown);
+  /* Dark Brown */
+  color: var(--accent-color-2);
+  /* Gold */
+}
+
+.btn--neutral {
+  background-color: var(--neutral-light);
+  /* Light brown */
+  color: var(--primary-color);
+  /* Charcoal Gray */
+  font-weight: var(--fw-700);
+  border: 4px solid var(--primary-color);
+  /* Charcoal Gray */
+  margin-bottom: 4em;
+}
+
+.btn--neutral:hover,
+.btn--neutral:focus {
+  color: var(--neutral-light);
+  /* Light brown */
+  background-color: var(--primary-color);
+  /* Charcoal Gray */
+}
+
+/* Resume Button Style */
+.btn--resume {
+  background: var(--accent-color-2);
+  /* Gold */
+  color: var(--dark-brown);
+  /* Dark Brown */
+  font-weight: var(--fw-700);
+  border: 4px solid var(--accent-color-2);
+  /* Gold */
+  margin: 4em 0;
+}
+
+.btn--resume:hover,
+.btn--resume:focus {
+  background: var(--dark-brown);
+  border-color: var(--dark-brown);
+  color: var(--accent-color-2);
+}
+
+/* Flex Layout for Buttons */
+.flex-group {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
