@@ -159,7 +159,7 @@ section {
 .page-header {
   padding: 2em 0;
   padding: var(--gap, 1em);
-  margin-inline: calc(var(--gap, 1em) * -1);
+  margin-inline: auto;
 }
 
 .page-header__content {
